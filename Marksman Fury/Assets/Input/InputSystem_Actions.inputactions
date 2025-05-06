@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Attack1",
+                    "type": "Button",
+                    "id": "9730d98f-a2b7-46a5-9564-1f772f43ac34",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -323,7 +332,7 @@
                     "name": "",
                     "id": "84f07d4b-aa4a-4f91-83b7-f57e65cb323f",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Attack",
@@ -481,6 +490,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ecfd2b5b-69e1-44d3-930e-37fd7b014350",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Attack1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
