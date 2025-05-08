@@ -13,12 +13,18 @@ public class EnemyMovement : MonoBehaviour
     
     private float _changeDirectionCooldown;
     
+    [SerializeField] private float screenBorder;
+    
+    private Camera _camera;
+    
+    
    
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _playerAwarenessController = GetComponent<PlayerAwarenessController>();
         _targetDirection = transform.up;
+        _camera = Camera.main;
     }
     
 
@@ -29,6 +35,9 @@ public class EnemyMovement : MonoBehaviour
         RotationTowardsTarget();
         SetVelocity();
     }
+    
+    
+    
 
     private void UpdateDirection()
     {
@@ -37,7 +46,24 @@ public class EnemyMovement : MonoBehaviour
         {
             _targetDirection = _playerAwarenessController.DirectionToPlayer;
         }
+        PreventEnemyGoingOffScreen();
        
+    }
+    
+    private void PreventEnemyGoingOffScreen()
+    {
+        Vector2 screenPoint = _camera.WorldToScreenPoint(transform.position);
+        
+        if ((screenPoint.x < screenBorder && _targetDirection.x < 0) || (screenPoint.x > _camera.pixelWidth - screenBorder && _targetDirection.x > 0))
+        {
+            _targetDirection = new Vector2(-_targetDirection.x, _targetDirection.y);
+        }
+        
+        if ((screenPoint.y < screenBorder && _targetDirection.y < 0) || (screenPoint.y > (_camera.pixelHeight - screenBorder) && _targetDirection.y > 0))
+        {
+            _targetDirection = new Vector2(_targetDirection.x, -_targetDirection.y);
+        }
+        
     }
     
     

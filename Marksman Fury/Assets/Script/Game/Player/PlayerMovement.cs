@@ -10,6 +10,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _smoothMovementVelocity;
     [SerializeField] private float speed;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private float screenBorder;
+    
+    private Camera _camera;
+
+    private void Awake()
+    {
+        _camera = Camera.main;
+        
+    }
 
     private void FixedUpdate()
     {
@@ -21,6 +30,23 @@ public class PlayerMovement : MonoBehaviour
     {
         _smoothMovement = Vector2.SmoothDamp(_smoothMovement, _movement, ref _smoothMovementVelocity, 0.1f);
         playerRbRigidbody2D.linearVelocity = _smoothMovement * 5;
+        PreventPlayerGoingOffScreen();
+    }
+
+    private void PreventPlayerGoingOffScreen()
+    {
+        Vector2 screenPoint = _camera.WorldToScreenPoint(transform.position);
+        
+        if ((screenPoint.x < screenBorder && playerRbRigidbody2D.linearVelocity.x < 0) || (screenPoint.x > _camera.pixelWidth - screenBorder && playerRbRigidbody2D.linearVelocity.x > 0))
+        {
+            playerRbRigidbody2D.linearVelocity = new Vector2(0, playerRbRigidbody2D.linearVelocity.y);
+        }
+        
+        if ((screenPoint.y < screenBorder && playerRbRigidbody2D.linearVelocity.y < 0) || (screenPoint.y > _camera.pixelHeight -screenBorder && playerRbRigidbody2D.linearVelocity.y > 0))
+        {
+            playerRbRigidbody2D.linearVelocity = new Vector2(playerRbRigidbody2D.linearVelocity.x, 0);
+        }
+        
     }
 
     private void RotationInDirectionInput()
