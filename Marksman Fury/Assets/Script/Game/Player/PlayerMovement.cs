@@ -13,10 +13,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float screenBorder;
     
     private Camera _camera;
+    private Animator _animator;
 
     private void Awake()
     {
         _camera = Camera.main;
+        _animator = GetComponent<Animator>();
         
     }
 
@@ -24,6 +26,14 @@ public class PlayerMovement : MonoBehaviour
     {
         SetPlayerMovement();
         RotationInDirectionInput();
+        SetAnimation();
+    }
+
+    private void SetAnimation()
+    {
+        bool playerIsMoving = _movement != Vector2.zero;
+        
+        _animator.SetBool("isMoving", playerIsMoving);
     }
 
     private void SetPlayerMovement()
