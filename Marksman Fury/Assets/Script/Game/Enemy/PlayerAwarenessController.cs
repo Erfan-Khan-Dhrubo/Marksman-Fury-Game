@@ -5,7 +5,7 @@ public class PlayerAwarenessController : MonoBehaviour
 {
     public bool AwareOfPlayer { get; private set; }
     
-    public PlayerMovement playerMovement;
+    //public PlayerMovement playerMovement;
     
     public Vector2 DirectionToPlayer { get; private set; }
     
@@ -16,7 +16,7 @@ public class PlayerAwarenessController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        _player = playerMovement.GetComponent<PlayerMovement>().transform;
+        _player = FindFirstObjectByType<PlayerMovement>().transform;
 
     }
 
