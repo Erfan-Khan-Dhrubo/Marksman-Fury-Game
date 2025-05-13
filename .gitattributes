@@ -5,3 +5,18 @@
 Assets/**/*.shader linguist-detectable=false
 Assets/**/*.mat linguist-detectable=false
 Assets/**/*.meta linguist-detectable=false
+
+
+# Ignore Unity auto-generated or shader-related files for language stats
+*.shader linguist-detectable=false
+*.hlsl linguist-detectable=false
+*.cginc linguist-detectable=false
+*.mat linguist-detectable=false
+*.meta linguist-detectable=false
+*.anim linguist-detectable=false
+*.controller linguist-detectable=false
+*.prefab linguist-detectable=false
+*.unity linguist-detectable=false
+
+# Force .cs files to be counted as C#
+*.cs linguist-language=C#
