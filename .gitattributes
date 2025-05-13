@@ -1,0 +1,7 @@
+# Tell GitHub Linguist to ignore meta and shader files
+*.shader linguist-detectable=false
+*.mat linguist-detectable=false
+*.meta linguist-detectable=false
+Assets/**/*.shader linguist-detectable=false
+Assets/**/*.mat linguist-detectable=false
+Assets/**/*.meta linguist-detectable=false
