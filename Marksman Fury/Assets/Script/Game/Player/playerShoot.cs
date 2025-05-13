@@ -45,7 +45,7 @@ public class playerShoot : MonoBehaviour
 
     public void OnAttack(InputValue inputValue)
     {
-        Debug.Log("Fire");
+        // Debug.Log("Fire");
         _fireContinously = inputValue.isPressed;
     }
     
