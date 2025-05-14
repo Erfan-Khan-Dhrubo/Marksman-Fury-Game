@@ -29,7 +29,7 @@ public class SpriteFlash : MonoBehaviour
             }
             
             
-            float pingpongPercentage = Mathf.PingPong(elapsedFlashPercentage * 2  * numberOfFlashes,1);
+            float pingpongPercentage = Mathf.PingPong(elapsedFlashPercentage * 2  * numberOfFlashes,1); // !
             _spriteRenderer.color = Color.Lerp(startColor, flashColor, pingpongPercentage);
             
             yield return null;
