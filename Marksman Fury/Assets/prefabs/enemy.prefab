@@ -171,6 +171,11 @@ MonoBehaviour:
   speed: 1
   rotationSpeed: 100
   screenBorder: -30
+  obstacleCheckCircleRadius: 0.45
+  obstacleCheckDistance: 1
+  obstacleLayerMaskMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!114 &3409728271644820955
 MonoBehaviour:
   m_ObjectHideFlags: 0

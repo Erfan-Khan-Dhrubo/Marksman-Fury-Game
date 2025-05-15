@@ -16,6 +16,17 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float screenBorder;
     
     private Camera _camera;
+
+    [SerializeField] private float obstacleCheckCircleRadius;
+    
+    [SerializeField] private float obstacleCheckDistance;
+    
+    [SerializeField] private LayerMask obstacleLayerMaskMask;
+
+    private RaycastHit2D[] _obstacleCollisions;
+    
+    private float _obstacleAvoidanceCooldown;
+    private Vector2 _obstacleAvoidanceTargetDirection;
     
     
    
@@ -25,6 +36,7 @@ public class EnemyMovement : MonoBehaviour
         _playerAwarenessController = GetComponent<PlayerAwarenessController>();
         _targetDirection = transform.up;
         _camera = Camera.main;
+        _obstacleCollisions = new RaycastHit2D[10];
     }
     
 
@@ -46,6 +58,7 @@ public class EnemyMovement : MonoBehaviour
         {
             _targetDirection = _playerAwarenessController.DirectionToPlayer;
         }
+        HandleObstacles();
         PreventEnemyGoingOffScreen();
        
     }
@@ -81,12 +94,46 @@ public class EnemyMovement : MonoBehaviour
         
     }
 
+    // ??
+    private void HandleObstacles()
+    {
+        _obstacleAvoidanceCooldown -= Time.deltaTime;
+        
+        var contactFilter = new ContactFilter2D();
+        contactFilter.SetLayerMask(obstacleLayerMaskMask);
+        
+        int numberOfCollisions = Physics2D.CircleCast(transform.position, obstacleCheckCircleRadius , transform.up, contactFilter, _obstacleCollisions, obstacleCheckDistance);
+
+        for (int index = 0; index < numberOfCollisions; index++)
+        {
+            var obstacleCollision = _obstacleCollisions[index];
+
+            if (obstacleCollision.collider.gameObject == gameObject)
+            {
+                continue;
+            }
+
+            if (_obstacleAvoidanceCooldown <= 0)
+            {
+                _obstacleAvoidanceTargetDirection = obstacleCollision.normal;
+                _obstacleAvoidanceCooldown = 0.5f;
+            }
+            
+            var targetRotation = Quaternion.LookRotation(transform.forward, _obstacleAvoidanceTargetDirection);
+            var rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            
+            _targetDirection = rotation * Vector2.up;
+            break;
+        }
+    }
+
     private void RotationTowardsTarget()
     {
         Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _targetDirection);
         Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         _rigidbody2D.SetRotation(rotation);
     }
+    
 
     private void SetVelocity()
     { 
