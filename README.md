@@ -26,11 +26,18 @@
    git clone https://github.com/Erfan-Khan-Dhrubo/Marksman-Fury-Game.git
 
 
-### A visual representation of the game:
+## A visual representation of the game:
 
-<div style="display: flex; gap: 15px;">
-  <img src="./game visualization/Screenshot 1.png" alt="Screenshot 1" width="500" style="border: 2px solid #ccc; border-radius: 8px;">
-  <img src="./game visualization/Screenshot 2.png" alt="Screenshot 2" width="500" style="border: 2px solid #ccc; border-radius: 8px;">
-  <img src="./game visualization/Screenshot 3.png" alt="Screenshot 3" width="500" style="border: 2px solid #ccc; border-radius: 8px;">
-  <img src="./game visualization/Screenshot 4.png" alt="Screenshot 4" width="500" style="border: 2px solid #ccc; border-radius: 8px;">
-</div>
+
+<p align="center">
+  <img src="./game visualization/Screenshot 1.png" alt="Screenshot 2" width="600" style="border: 2px solid #ccc; border-radius: 8px;">
+</p>
+<p align="center">
+  <img src="./game visualization/Screenshot 2.png" alt="Screenshot 2" width="600" style="border: 2px solid #ccc; border-radius: 8px;">
+</p>
+<p align="center">
+  <img src="./game visualization/Screenshot 3.png" alt="Screenshot 2" width="600" style="border: 2px solid #ccc; border-radius: 8px;">
+</p>
+<p align="center">
+  <img src="./game visualization/Screenshot 4.png" alt="Screenshot 2" width="600" style="border: 2px solid #ccc; border-radius: 8px;">
+</p>
