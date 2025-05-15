@@ -14,11 +14,14 @@ public class PlayerMovement : MonoBehaviour
     
     private Camera _camera;
     private Animator _animator;
+    
+    private AudioManager _audioManager;
 
     private void Awake()
     {
         _camera = Camera.main;
         _animator = GetComponent<Animator>();
+        _audioManager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
         
     }
 
@@ -69,5 +72,10 @@ public class PlayerMovement : MonoBehaviour
     private void OnMove(InputValue value)
     {
         _movement = value.Get<Vector2>();
+    }
+
+    public void PlayDeathSound()
+    {
+        _audioManager.PlaySfx(_audioManager.gameOverMusic);
     }
 }

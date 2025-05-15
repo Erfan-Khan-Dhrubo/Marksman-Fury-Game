@@ -6,11 +6,13 @@ public class InvisibilityController : MonoBehaviour
 {
     private HealthController _healthController;
     private SpriteFlash _spriteFlash;
+    private AudioManager _audioManager;
 
     private void Awake()
     {
         _healthController = GetComponent<HealthController>();
         _spriteFlash = GetComponent<SpriteFlash>();
+        _audioManager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
     }
 
     public void StartInvincibility(float invincibilityDuration, Color flashColor, int numOfFlashes)  
@@ -20,7 +22,9 @@ public class InvisibilityController : MonoBehaviour
 
     private IEnumerator InvincibilityCoroutine(float invincibilityDuration, Color flashColor, int numOfFlashes)   // Coroutine ?
     {
+        
         _healthController.isInvincible = true;
+        _audioManager.PlaySfx(_audioManager.playerDamage);
         yield return _spriteFlash.FlashCoroutine(invincibilityDuration, flashColor, numOfFlashes);
         _healthController.isInvincible = false;
     }

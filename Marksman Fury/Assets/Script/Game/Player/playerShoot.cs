@@ -14,6 +14,13 @@ public class playerShoot : MonoBehaviour
 
     private bool _fireSingle;
     
+    private AudioManager _audioManager;
+    
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
+    }
+    
     
 
     // Update is called once per frame
@@ -36,6 +43,7 @@ public class playerShoot : MonoBehaviour
     private void FireBullet()
     {
         GameObject bullet = Instantiate(bulletPrefab, gunOffset.transform.position, transform.rotation);
+        _audioManager.PlaySfx(_audioManager.gunshot);
         Rigidbody2D rigidBody = bullet.GetComponent<Rigidbody2D>();
 
         rigidBody.linearVelocity = bulletSpeed * transform.up;
