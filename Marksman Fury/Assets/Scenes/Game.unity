@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86226560}
   - component: {fileID: 86226561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 724080137}
   - component: {fileID: 724080138}
   - component: {fileID: 724080139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,6 +1170,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078999510}
   m_CullTransparentMesh: 1
+--- !u!1001 &1159810307
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4011897512977283960, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_Name
+      value: Strong Enemy Spawner Variant (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
 --- !u!1 &1320823852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,7 +1412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1443866460}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gun offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,6 +1491,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 665066b6706036b4cbed1794380c7dbf, type: 3}
+--- !u!1001 &1682536516
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462149697975417516, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4011897512977283960, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
+      propertyPath: m_Name
+      value: Strong Enemy Spawner Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 528a4e0b45058b143811920d4df58acc, type: 3}
 --- !u!1 &1738212873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,3 +1961,5 @@ SceneRoots:
   - {fileID: 34821487}
   - {fileID: 1409300834}
   - {fileID: 1936873176}
+  - {fileID: 1682536516}
+  - {fileID: 1159810307}
