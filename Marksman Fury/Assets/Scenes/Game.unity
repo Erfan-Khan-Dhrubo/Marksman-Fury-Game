@@ -2008,6 +2008,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: healing
+      value: 
+      objectReference: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: enemyDeath
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c47b20bb9874304a809dc5580d403ba, type: 3}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: playerDamage
+      value: 
+      objectReference: {fileID: 8300000, guid: 794be7c4bd9e64c9bbb9776937807a9e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
