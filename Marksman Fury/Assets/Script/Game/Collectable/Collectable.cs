@@ -5,6 +5,7 @@ public class Collectable : MonoBehaviour
 {
     private ICollectabehaviur _collectabeBehaviour;
     private AudioManager _audioManager;
+    
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ public class Collectable : MonoBehaviour
         {
             _collectabeBehaviour.OnCollected(player.gameObject);
             Destroy(gameObject);
-            _audioManager.PlaySfx(_audioManager.healing);
+            _audioManager.PlaySfx(_audioManager.healing, _audioManager.healingVolume);
         }
     }
 }

@@ -2020,6 +2020,30 @@ PrefabInstance:
       propertyPath: playerDamage
       value: 
       objectReference: {fileID: 8300000, guid: 794be7c4bd9e64c9bbb9776937807a9e, type: 3}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: gunshotVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: healingVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: enemyDeathVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: playerDamageVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: gameOverMusicVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680537115507888940, guid: 3c4441286ed58b54293b372e4883b83a, type: 3}
+      propertyPath: backgroundMusicVolume
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

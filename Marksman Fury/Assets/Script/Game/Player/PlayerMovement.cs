@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     
     private AudioManager _audioManager;
+    
+    
 
     private void Awake()
     {
@@ -76,6 +79,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayDeathSound()
     {
-        _audioManager.PlaySfx(_audioManager.gameOverMusic);
+        _audioManager.PlaySfx(_audioManager.gameOverMusic, _audioManager.gameOverMusicVolume);
     }
 }

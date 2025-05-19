@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyDestroyController : MonoBehaviour
 {
     private AudioManager _audioManager;
+    
 
     private void Awake()
     {
@@ -18,7 +19,7 @@ public class EnemyDestroyController : MonoBehaviour
 
     public void PlayEnemyDeathSfx()
     {
-        //Debug.Log("hello");
-        _audioManager.PlaySfx(_audioManager.enemyDeath);
+        //print("hello");
+        _audioManager.PlaySfx(_audioManager.enemyDeath, _audioManager.enemyDeathVolume);
     }
 }

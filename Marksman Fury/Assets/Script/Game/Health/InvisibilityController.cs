@@ -7,6 +7,7 @@ public class InvisibilityController : MonoBehaviour
     private HealthController _healthController;
     private SpriteFlash _spriteFlash;
     private AudioManager _audioManager;
+    
 
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class InvisibilityController : MonoBehaviour
     {
         
         _healthController.isInvincible = true;
-        _audioManager.PlaySfx(_audioManager.playerDamage);
+        _audioManager.PlaySfx(_audioManager.playerDamage, _audioManager.playerDamageVolume);
         yield return _spriteFlash.FlashCoroutine(invincibilityDuration, flashColor, numOfFlashes);
         _healthController.isInvincible = false;
     }
