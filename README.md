@@ -33,10 +33,10 @@
    ```bash
    git clone https://github.com/Erfan-Khan-Dhrubo/Marksman-Fury-Game.git
 
----
-
 2. Open the project folder in Unity Editor.
 3. Play the scene to experience the game.
+
+---
 
 ## A visual representation of the game:
 
